@@ -1,4 +1,3 @@
-# Software_Engineer_Project
 # SmartSpend AI
 
 SmartSpend AI is a personal finance web app that helps people understand where their money goes and make smarter spending decisions. Users log their income and daily expenses, set budgets and savings goals, and get instant alerts and insights, such as how small daily purchases add up each month.

@@ -1,17 +1,17 @@
-# SmartSpend AI
+# Spendly
 
-SmartSpend AI is a personal finance web app that helps people understand where their money goes and make smarter spending decisions. Users log their income and daily expenses, set budgets and savings goals, and get instant alerts and insights, such as how small daily purchases add up each month.
+Spendly is a personal finance web app that helps people understand where their money goes and make smarter spending decisions. Users log their income and daily expenses, set budgets and savings goals, and get instant alerts and insights, such as how small daily purchases add up each month.
 
 **Target users:** university students, young professionals, and families.
 
 ## Features (Phase 1)
 
+- **Account & profile:** register, log in, log out, and manage display name, currency, and monthly income
 - **Income & expenses:** add, view, and delete transactions with a live balance
 - **Daily spending log:** quick entry with one-tap categories (food, transport, coffee, etc.)
 - **Dashboard:** summary cards, spending-by-category chart, and monthly overview
 - **Budgets & alerts:** set monthly limits per category and get warnings at 80% and 100%
 - **Savings goals:** track progress toward goals with progress bars
-- **Smart insights:** rule-based tips that highlight top spending categories and small-spend habits
 - **About page:** the project presentation (problem, solution, market, roadmap)
 
 > Phase 1 uses rule-based insights and browser `localStorage`. LLM-powered chat, forecasting, and bank integrations are planned for later phases.
@@ -32,14 +32,14 @@ React 18 · Vite · React Router · Recharts · Vitest · ESLint · GitHub Actio
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-org>/SpendSmart.git
-cd SpendSmart
+git clone https://github.com/Habibahisham2455/Software_Engineer_Project.git
+cd Software_Engineer_Project
 
 # 2. Install dependencies
-npm install
+#npm install
 
 # 3. Start the development server
-npm run dev
+#npm run dev
 ```
 
 Open the URL shown in the terminal (usually http://localhost:5173).

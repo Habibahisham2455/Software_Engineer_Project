@@ -33,14 +33,6 @@ def register(email, password, display_name, currency, monthly_income):
     save_users(users)
     return True, "Registered successfully."
 
-def login(email, password):
-    users = load_users()
-    if not is_valid_email(email):
-        return False, "Wrong email! Must end with @domain."
-    user = users.get(email)
-    if user and user["password"] == password:
-        return True, f"Welcome, {user['display_name']}!"
-    return False, "Invalid email or password."
 
 def login(email, password):
     users = load_users()

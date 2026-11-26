@@ -17,6 +17,7 @@ def save_func(users):
 def is_valid_email(email):
     return email.endswith("@domain") and len(email) > len("@domain")
 
+
 def register_func(email, password, display_name, currency, monthly_income):
     users = load_func()
 
@@ -27,8 +28,8 @@ def register_func(email, password, display_name, currency, monthly_income):
         raise ValueError("Account already exists.")
 
     users[email] = {
-        "password": password, "display name": display_name,
-        "currency": currency, "monthly income": float(monthly_income)
+        "password": password, "display_name": display_name,
+        "currency": currency, "monthly_income": float(monthly_income)
     }
 
     save_func(users)
@@ -37,12 +38,15 @@ def register_func(email, password, display_name, currency, monthly_income):
 
 def login(email, password):
     users = load_func()
-    if email not in users:
-        return False, "Wrong Email, Try Again."
-    if users[email]["password"] == password:
-        return True, f"Welcome, {users[email]['display_name']}!"
-    return False, "Invalid password."
 
+    if email not in users:
+        raise ValueError("Wrong Email, Please Try Again")
+    
+    elif users[email]["password"] != password:
+        raise ValueError("Invalid Password, Please Try Again")
+    
+    return f"Welcome, {users[email]['display_name']}!"
+    
 
 def get_profile(email):
     users = load_func()
@@ -50,10 +54,13 @@ def get_profile(email):
 
 def update_profile(email, display_name, currency, monthly_income):
     users = load_func()
+
     if email not in users:
-        return False, "User not found."
+        raise ValueError("User not found.")
+    
     users[email]["display_name"] = display_name
     users[email]["currency"] = currency
     users[email]["monthly_income"] = float(monthly_income)
+
     save_func(users)
-    return True, "Profile updated."
+    return "Profile updated."

@@ -37,7 +37,7 @@ class TestAccount(unittest.TestCase):
 
     def test_login_valid_credentials(self):
         register_func("name5@domain", "9999", "Name", "GBP", 5600)
-        self.assertEqual(login("name5@domain", "1234"),  "Welcome, Name!")
+        self.assertEqual(login("name5@domain", "9999"),  "Welcome, Name!")
 
     def test_login_invalid_password(self):
         register_func("name6@domain", "9999", "Name", "GBP", 5600)
@@ -49,7 +49,7 @@ class TestAccount(unittest.TestCase):
             login("unknown@domain", "1234")
 
     #testing profile functions
-    
+
     def test_get_existing_profile(self):
         register_func("existing@domain", "9999", "Name", "EGP", 9000)
         self.assertEqual(get_profile("existing@domain")["display_name"], "Name")
